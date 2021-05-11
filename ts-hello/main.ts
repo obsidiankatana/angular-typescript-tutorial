@@ -1,24 +1,9 @@
-// This is a class
-class Point {
-    x: number;
-    y: number;
-
-    constructor(x?: number, y?: number) {
-        this.x = x;
-        this.y = y;
-    }
-
-    draw() {
-        console.log(`X: ${this.x}, Y: ${this.y}`);
-    };
-
-    getDistance: (another: Point) => {
-        // ...
-    };
-}
+import { Point } from './point';
 
 // This is an object aka an instance of a class
 let point = new Point(1, 2);
+let x = point.X
+point.X
 point.draw();
 
 
