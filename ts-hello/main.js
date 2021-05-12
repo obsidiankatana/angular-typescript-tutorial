@@ -1,16 +1,15 @@
-var Point = /** @class */ (function () {
-    function Point() {
-    }
-    Point.prototype.draw = function () {
-        console.log("X: " + this.x + ", Y: " + this.y);
-    };
-    ;
-    return Point;
-}());
-var point = new Point();
-point.x = 1;
-point.y = 2;
-point.draw();
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var like_component_1 = require("./like.component");
+var component = new like_component_1.LikeComponent(10, true);
+component.onClick();
+console.log("likeCount: " + component.likesCount + ", isSelected: " + component.isSelected);
+// import { Point } from './point';
+// This is an object aka an instance of a class
+// let point = new Point(1, 2);
+// let x = point.X
+// point.X
+// point.draw();
 // let log = function(message) {
 //     console.log(message);
 // }

@@ -1,10 +1,18 @@
-import { Point } from './point';
+import { LikeComponent } from './like.component';
+
+let component = new LikeComponent(10, true);
+component.onClick();
+console.log(`likeCount: ${component.likesCount}, isSelected: ${component.isSelected}`)
+
+// import { Point } from './point';
+
+
 
 // This is an object aka an instance of a class
-let point = new Point(1, 2);
-let x = point.X
-point.X
-point.draw();
+// let point = new Point(1, 2);
+// let x = point.X
+// point.X
+// point.draw();
 
 
 
