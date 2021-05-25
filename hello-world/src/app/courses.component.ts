@@ -3,22 +3,22 @@ import { CoursesService } from './course/courses.service';
 
 @Component({
     selector: 'courses', // <courses>
+    // template: `
+    //             <button class="btn btn-primary">Save</button>
+    //             <input [(ngModel)]="email" (keyup.enter)="onKeyUp()"/>
+    //           `
     template: `
-                <h2>{{ title }}<h2>
-                <ul>
-                    <li *ngFor="let course of courses">
-                        {{course}}
-                    </li>
-                </ul>
+                {{text | summary}}
               `
 })
 export class CoursesComponent {
-    title = "List of courses";
-    courses;
+    text = `
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin fermentum est ante, sed venenatis neque aliquam quis. Aenean sem nunc, vulputate id aliquam quis, tristique eu lorem. Vestibulum vitae congue sem, luctus porta urna. Sed placerat, enim id tincidunt venenatis, purus est sagittis lacus, sed sagittis ante erat a nisl.
+    `
+    // email: any;
+    // email = "me@example.com"
 
-    constructor(service: CoursesService) {
-        this.courses = service.getCourses();
-    }
-
-    // Add the logic to call an http endpoint
+    // onKeyUp() {
+    //     console.log(this.email);
+    // }
 }
