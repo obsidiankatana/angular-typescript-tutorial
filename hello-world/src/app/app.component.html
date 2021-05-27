@@ -1,7 +1,41 @@
-<h1>Angular</h1>
-<titlecase></titlecase>
+<bootstrap-panel>
+  <ng-container class="heading">Heading</ng-container>
+  <div class="body">
+    <img [src]="imageUrl" class="card-img-top" />
+    <h2>Body</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi vitae
+      aspernatur officiis cupiditate quasi sunt saepe cumque ipsam,
+      reprehenderit, natus nesciunt assumenda qui harum nihil quo id, deleniti
+      esse doloribus!
+    </p>
+    <div class="card-body">
+      <like
+        style="display: inline-block"
+        class="card-link"
+        [likesCount]="tweet.likesCount"
+        [isActive]="tweet.isLiked"
+        (like-event)="onHeart($event)"
+      ></like>
+      <p style="display: inline-block" class="card-link">
+        {{ tweet.likesCount }}
+      </p>
+    </div>
+  </div>
+</bootstrap-panel>
+<!-- [likesCount]="tweet.likesCount" -->
+<!-- [isActive]="tweet.isLiked" -->
+<!-- <h1>Angular</h1> -->
+<!-- <img [src]="iageUrl" /> -->
+<!-- <button (click)="onClick()"></button> -->
+<!-- <app-favorite
+  [is-selected]="post.isFavorite"
+  (change)="onFavoriteChanged($event)"
+></app-favorite>
+<p>{{ post.title }}</p> -->
+<!-- <titlecase></titlecase> -->
 <br />
-<app-favorite></app-favorite>
+<!-- <app-favorite></app-favorite> -->
 <br />
-<courses></courses>
+<!-- <courses></courses> -->
 <!-- <app-authors></app-authors> -->
