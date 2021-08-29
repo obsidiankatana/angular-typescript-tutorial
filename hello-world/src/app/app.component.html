@@ -1,3 +1,57 @@
+<!-- <div *ngIf="courses.length > 0; then courseList; else noCourses"></div>
+<ng-template #courseList>
+  <h1>List of Courses</h1>
+</ng-template>
+<ng-template #noCourses>
+  <h1>No Courses Yet</h1>
+</ng-template> -->
+<!-- <div [hidden]="courses.length == 0">
+  <h1>List of Courses</h1>
+</div>
+
+<div [hidden]="courses.length > 0">
+  <h1>No Courses Yet</h1>
+</div> -->
+
+<ul class="nav nav-pills">
+  <li class="nav-item">
+    <a
+      [class.active]="viewMode == 'map'"
+      class="nav-link"
+      (click)="viewMode = 'map'"
+      href="#"
+      >Map View</a
+    >
+  </li>
+  <li class="nav-item">
+    <a
+      [class.active]="viewMode == 'list'"
+      class="nav-link"
+      (click)="viewMode = 'list'"
+      href="#"
+      >List View</a
+    >
+  </li>
+</ul>
+<div [ngSwitch]="viewMode">
+  <h2 *ngSwitchCase="'map'">Map View Content</h2>
+  <h2 *ngSwitchCase="'list'">List View Content</h2>
+  <h2 *ngSwitchDefault>Otherwise</h2>
+</div>
+<!-- <button type="button" class="btn btn-dark" (click)="onAdd()">Add</button> -->
+
+<button type="button" class="btn btn-dark" (click)="loadCourses()">
+  Load Course
+</button>
+<ul>
+  <li *ngFor="let course of courses; index as i; even as isEven">
+    {{ i + 1 }} - {{ course.name }} <span *ngIf="isEven">(EVEN)</span>
+    <button type="button" class="btn btn-dark" (click)="onChange(course)">
+      Remove
+    </button>
+  </li>
+</ul>
+
 <bootstrap-panel>
   <ng-container class="heading">Heading</ng-container>
   <div class="body">
